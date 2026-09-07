@@ -16,11 +16,13 @@ and triggers compensation in reverse order on failure.
 
 ## Architecture
 
+```bash
 | Service | Port | Responsibility |
 | `orchestrator-service` | 8080 | Drives the saga, handles compensation |
 | `order-service` | 8081 | Creates and cancels orders |
 | `payment-service` | 8082 | Charges and refunds payments |
 | `inventory-service` | 8083 | Reserves and releases stock |
+```
 
 Happy path: `createOrder → chargePayment → reserveStock → confirmOrder`
 
@@ -65,9 +67,11 @@ docs/                   Sequence diagrams
 
 ## Group
 
+```bash
 | Name | Matric |
 | Daniel Frutos Rodriguez | G2604692C |
 | Devadathan Menon | G2609217J |
 | Jatin Sharma | G2604683L |
 | Pimpale Padmakar Rajendra | G2605578K |
 | Loe Jun Xiang | G2605613F |
+```
